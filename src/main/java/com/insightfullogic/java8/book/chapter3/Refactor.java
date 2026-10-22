@@ -59,8 +59,8 @@ public class Refactor {
                     .forEach(album -> {
                         album.getTracks()
                                 .filter(track -> track.getLength() > 60)
-                                .map(track -> track.getName())
-                                .forEach(name -> trackNames.add(name));
+                                .map(Track::getName)
+                                .forEach(trackNames::add);
                     });
             return trackNames;
         }
