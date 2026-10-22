@@ -76,9 +76,9 @@ future.completeExceptionally(new AlbumLookupException("Unable to find " + name))
         return CompletableFuture.completedFuture(artists);
     }
 
-    private void sleep(long time) {
+    private void sleep() {
         try {
-            Thread.sleep(time);
+            Thread.sleep((long) 1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -86,7 +86,7 @@ future.completeExceptionally(new AlbumLookupException("Unable to find " + name))
 
     private CompletableFuture<List<Track>> lookupTracks(String albumName, Credentials credentials) {
         return CompletableFuture.supplyAsync(() -> {
-            sleep(1000);
+            sleep();
             return tracks;
         }, SERVICE);
     }
@@ -94,7 +94,7 @@ future.completeExceptionally(new AlbumLookupException("Unable to find " + name))
     private CompletableFuture<Credentials> loginTo(String serviceName) {
         return CompletableFuture.supplyAsync(() -> {
             if ("artist".equals(serviceName)) {
-                sleep(1000);
+                sleep();
             }
             return new Credentials();
         }, SERVICE);

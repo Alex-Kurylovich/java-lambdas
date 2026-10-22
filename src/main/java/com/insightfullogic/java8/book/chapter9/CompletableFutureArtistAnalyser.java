@@ -20,7 +20,7 @@ public class CompletableFutureArtistAnalyser implements ArtistAnalyzer {
         CompletableFuture<Long> artistMemberCount = CompletableFuture.completedFuture(getNumberOfMembers(artistName));
 
         artistMemberCount.thenCombine(otherArtistMemberCount, (count, otherCount) -> count > otherCount)
-                         .thenAccept(handler::accept);
+                         .thenAccept(handler);
     }
 
     private long getNumberOfMembers(String artistName) {
