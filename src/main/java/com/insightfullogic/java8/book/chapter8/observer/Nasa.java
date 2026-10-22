@@ -1,6 +1,6 @@
 package com.insightfullogic.java8.book.chapter8.observer;
 
-// BEGIN Nasa
+// BEGIN NASA
 public class Nasa implements LandingObserver {
     @Override
     public void observeLanding(String name) {
@@ -9,4 +9,4 @@ public class Nasa implements LandingObserver {
         }
     }
 }
-// END Nasa
+// END NASA

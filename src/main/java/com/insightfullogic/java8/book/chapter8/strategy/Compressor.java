@@ -1,7 +1,6 @@
 package com.insightfullogic.java8.book.chapter8.strategy;
 
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.file.Files;
@@ -19,30 +18,30 @@ public class Compressor {
     }
 
     public void compress(Path inFile, File outFile) throws IOException {
-        try (OutputStream outStream = new FileOutputStream(outFile)) {
+        try (OutputStream outStream = Files.newOutputStream(outFile.toPath())) {
             Files.copy(inFile, strategy.compress(outStream));
         }
     }
 // END Compressor
 
     public static void classBasedExample(Path inFile, File outFile) throws IOException {
-// BEGIN classBasedExample
-Compressor gzipCompressor = new Compressor(new GzipCompressionStrategy());
-gzipCompressor.compress(inFile, outFile);
+        // BEGIN classBasedExample
+        Compressor gzipCompressor = new Compressor(new GzipCompressionStrategy());
+        gzipCompressor.compress(inFile, outFile);
 
-Compressor zipCompressor = new Compressor(new ZipCompressionStrategy());
-zipCompressor.compress(inFile, outFile);
-// END classBasedExample
+        Compressor zipCompressor = new Compressor(new ZipCompressionStrategy());
+        zipCompressor.compress(inFile, outFile);
+        // END classBasedExample
     }
 
     public static void lambdaBasedExample(Path inFile, File outFile) throws IOException {
-// BEGIN lambdaBasedExample
-Compressor gzipCompressor = new Compressor(GZIPOutputStream::new);
-gzipCompressor.compress(inFile, outFile);
-        
-Compressor zipCompressor = new Compressor(ZipOutputStream::new);
-zipCompressor.compress(inFile, outFile);
-// END lambdaBasedExample
+        // BEGIN lambdaBasedExample
+        Compressor gzipCompressor = new Compressor(GZIPOutputStream::new);
+        gzipCompressor.compress(inFile, outFile);
+
+        Compressor zipCompressor = new Compressor(ZipOutputStream::new);
+        zipCompressor.compress(inFile, outFile);
+        // END lambdaBasedExample
     }
 
 }
