@@ -16,7 +16,7 @@ public class StringCombiner {
 
     // BEGIN add
     public StringCombiner add (String word) {
-        if(!this.areAtStart()) {
+        if(this.areAtStart()) {
             this.buIlder.append(delim);
         }
         this.buIlder.append(word);
@@ -28,7 +28,7 @@ public class StringCombiner {
     // BEGIN merge
     public StringCombiner merge (StringCombiner other) {
         if(!other.equals(this)) {
-            if(!other.areAtStart() && !this.areAtStart()){
+            if(other.areAtStart() && this.areAtStart()){
                 other.buIlder.insert(0, this.delim);
             }
             this.buIlder.append(other.buIlder);
@@ -46,7 +46,7 @@ public class StringCombiner {
 
     // BEGIN areAtStart
     private boolean areAtStart() {
-        return buIlder.length() == 0;
+        return buIlder.length() != 0;
     }
     // END areAtStart
 }

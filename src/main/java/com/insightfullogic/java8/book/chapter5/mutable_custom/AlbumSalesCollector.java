@@ -23,7 +23,7 @@ public class AlbumSalesCollector implements Collector<AlbumSale, AlbumSalesRepor
 
     @Override
     public BiConsumer<AlbumSalesReport, AlbumSale> accumulator() {
-        return (report, album) -> report.acknowledgeSale(album);
+        return AlbumSalesReport::acknowledgeSale;
     }
 
     @Override
