@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public class ArtistsFixed {
 
-    private List<Artist> artists;
+    private final List<Artist> artists;
 
     public ArtistsFixed(List<Artist> artists) {
         this.artists = artists;
