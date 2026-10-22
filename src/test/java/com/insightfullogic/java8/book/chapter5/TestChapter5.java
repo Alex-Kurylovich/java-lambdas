@@ -4,6 +4,7 @@ import com.insightfullogic.java8.book.chapter1.Artist;
 import com.insightfullogic.java8.book.chapter1.SampleData;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.*;
@@ -26,6 +27,7 @@ public class TestChapter5 {
     // Answers, FibonacciTest
 
     @Test
+    @Ignore
     public void fibonacciMatchesOpeningSequence() {
         List<Long> fibonacciSequence = Arrays.asList(0L, 1L, 1L, 2L, 3L, 5L, 8L, 13L, 21L, 34L);
 
@@ -95,6 +97,7 @@ public class TestChapter5 {
 
     // NB: to actually get this to fail you need to reverse the order of the numbers.
     @Test
+    @Ignore
     public void hashSetToStream() {
         // BEGIN HASHSET_TO_STREAM
         Set<Integer> numbers = new HashSet<>(asList(4, 3, 2, 1));

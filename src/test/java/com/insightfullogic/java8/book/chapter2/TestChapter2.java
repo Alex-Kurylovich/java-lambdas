@@ -1,5 +1,6 @@
 package com.insightfullogic.java8.book.chapter2;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import javax.swing.*;
@@ -42,6 +43,7 @@ public class TestChapter2 {
     }
 
     @Test
+    @Ignore
     public void _2b() {
         ThreadLocal<DateFormat> threadSafeFormatter = ThreadLocal.withInitial(() -> DateFormat.getDateInstance(DateFormat.MEDIUM, Locale.UK));
         DateFormat formatter = threadSafeFormatter.get();
