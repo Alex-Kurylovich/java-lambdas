@@ -20,9 +20,9 @@ import static java.util.stream.Collectors.toList;
  */
 public final class Artist {
     
-    private String name;
-    private List<Artist> members;
-    private String nationality;
+    private final String name;
+    private final List<Artist> members;
+    private final String nationality;
     
     public Artist(String name, String nationality) {
         this(name, Collections.emptyList(), nationality);
