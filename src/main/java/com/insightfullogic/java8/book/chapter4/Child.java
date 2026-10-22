@@ -4,7 +4,7 @@ package com.insightfullogic.java8.book.chapter4;
 public interface Child extends Parent {
 
     @Override
-    public default void welcome() {
+    default void welcome() {
         message("Child: Hi!");
     }
 

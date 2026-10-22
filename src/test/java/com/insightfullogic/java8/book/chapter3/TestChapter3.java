@@ -31,7 +31,7 @@ public class TestChapter3 {
 
     @Test
     public void emptyList1() {
-        assertFiltered(x -> false, Collections.<Object>emptyList(), Collections.<Object>emptyList());
+        assertFiltered(x -> false, Collections.emptyList(), Collections.emptyList());
     }
 
     @Test
@@ -61,7 +61,7 @@ public class TestChapter3 {
 
     @Test
     public void emptyList2() {
-        assertMapped(Function.<Object>identity(), Collections.<Object>emptyList(), Collections.<Object>emptyList());
+        assertMapped(Function.identity(), Collections.emptyList(), Collections.emptyList());
     }
 
     @Test
@@ -135,7 +135,7 @@ public class TestChapter3 {
 
     @Test
     public void noStringReturnedForEmptyList() {
-        assertFalse(com.insightfullogic.java8.book.chapter3.StringExercises.mostLowercaseString(Collections.<String>emptyList()).isPresent());
+        assertFalse(com.insightfullogic.java8.book.chapter3.StringExercises.mostLowercaseString(Collections.emptyList()).isPresent());
     }
 
     @Test
@@ -335,7 +335,7 @@ public class TestChapter3 {
 
     @Test
     public void allStringJoins() {
-        List<Supplier<Refactor.LongTrackFinder>> finders = Arrays.<Supplier<Refactor.LongTrackFinder>>asList(
+        List<Supplier<Refactor.LongTrackFinder>> finders = Arrays.asList(
                 Refactor.Step0::new,
                 Refactor.Step1::new,
                 Refactor.Step2::new,

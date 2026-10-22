@@ -3,11 +3,11 @@ package com.insightfullogic.java8.book.chapter8.command;
 // BEGIN Editor
 public interface Editor {
 
-    public void save();
+    void save();
 
-    public void open();
+    void open();
 
-    public void close();
+    void close();
 
 }
 // END Editor

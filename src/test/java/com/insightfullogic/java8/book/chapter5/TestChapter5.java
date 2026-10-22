@@ -294,7 +294,7 @@ public class TestChapter5 {
 
     @Test
     public void allStringJoins() {
-        List<Function<List<Artist>, String>> formatters = Arrays.<Function<List<Artist>, String>>asList(
+        List<Function<List<Artist>, String>> formatters = Arrays.asList(
                 StringExamples::formatArtists,
                 StringExamples::formatArtistsForLoop,
                 StringExamples::formatArtistsRefactor1,

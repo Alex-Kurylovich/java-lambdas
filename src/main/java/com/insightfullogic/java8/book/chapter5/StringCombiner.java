@@ -40,7 +40,7 @@ public class StringCombiner {
     // BEGIN toString
     @Override
     public String toString() {
-        return prefix + buIlder.toString() + suffix;
+        return prefix + buIlder + suffix;
     }
     // END toString
 

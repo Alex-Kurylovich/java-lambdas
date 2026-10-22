@@ -1,6 +1,7 @@
 package com.insightfullogic.java8.book.chapter1;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -19,11 +20,11 @@ public class SampleData {
 
     public static final Artist theBeatles = new Artist("The Beatles", membersOfTheBeatles, "UK");
 
-    public static final Album aLoveSupreme = new Album("A Love Supreme", asList(new Track("Acknowledgement", 467), new Track("Resolution", 442)), asList(johnColtrane));
+    public static final Album aLoveSupreme = new Album("A Love Supreme", asList(new Track("Acknowledgement", 467), new Track("Resolution", 442)), Collections.singletonList(johnColtrane));
 
-    public static final Album sampleShortAlbum = new Album("sample Short Album", asList(new Track("short track", 30)), asList(johnColtrane));
+    public static final Album sampleShortAlbum = new Album("sample Short Album", Collections.singletonList(new Track("short track", 30)), Collections.singletonList(johnColtrane));
 
-    public static final Album manyTrackAlbum = new Album("sample Short Album", asList(new Track("short track", 30), new Track("short track 2", 30), new Track("short track 3", 30), new Track("short track 4", 30), new Track("short track 5", 30)), asList(johnColtrane));
+    public static final Album manyTrackAlbum = new Album("sample Short Album", asList(new Track("short track", 30), new Track("short track 2", 30), new Track("short track 3", 30), new Track("short track 4", 30), new Track("short track 5", 30)), Collections.singletonList(johnColtrane));
 
     public static Stream<Album> albums = Stream.of(aLoveSupreme);
 

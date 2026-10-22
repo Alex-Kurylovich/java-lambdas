@@ -11,8 +11,8 @@ import static java.util.stream.Collectors.toSet;
 
 public class Refactor {
 
-    public static interface LongTrackFinder {
-        public Set<String> findLongTracks(List<Album> albums);
+    public interface LongTrackFinder {
+        Set<String> findLongTracks(List<Album> albums);
     }
 
     public static class Step0 implements LongTrackFinder {

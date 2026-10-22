@@ -11,8 +11,8 @@ import static java.util.stream.Collectors.toList;
 
 public class DependencyInversionPrinciple {
 
-    public static interface HeadingFinder {
-        public List<String> findHeadings(Reader reader);
+    public interface HeadingFinder {
+        List<String> findHeadings(Reader reader);
     }
 
     public static class NoDIP implements HeadingFinder {

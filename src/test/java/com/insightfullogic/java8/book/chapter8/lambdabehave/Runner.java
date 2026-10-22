@@ -9,7 +9,7 @@ public enum Runner {
 
     private final Report report;
 
-    private Runner() {
+    Runner() {
         report = new Report();
     }
 

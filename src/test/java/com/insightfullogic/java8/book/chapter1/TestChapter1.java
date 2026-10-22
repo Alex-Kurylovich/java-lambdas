@@ -15,7 +15,7 @@ public class TestChapter1 {
 
     @Test
     public void allMembers() {
-        Album album = new Album("foo", Collections.<Track>emptyList(), singletonList(theBeatles));
+        Album album = new Album("foo", Collections.emptyList(), singletonList(theBeatles));
         Set<Artist> musicians = album.getAllMusicians().collect(toSet());
         Set<Artist> expectedMusicians = new HashSet<>(SampleData.membersOfTheBeatles);
         expectedMusicians.add(theBeatles);

@@ -3,13 +3,13 @@ package com.insightfullogic.java8.book.chapter4;
 // BEGIN body
 public interface Parent {
 
-    public void message(String body);
+    void message(String body);
 
-    public default void welcome() {
+    default void welcome() {
         message("Parent: Hi!");
     }
 
-    public String getLastMessage();
+    String getLastMessage();
 
 }
 // END body
