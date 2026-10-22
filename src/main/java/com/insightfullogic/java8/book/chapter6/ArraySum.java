@@ -19,11 +19,11 @@ public class ArraySum {
 
     public static void main(String[] ignore) throws IOException, RunnerException {
         final String[] args = {
-            ".*ArraySum.*",
-            "-wi",
-            "5",
-            "-i",
-            "5"
+                ".*ArraySum.*",
+                "-wi",
+                "5",
+                "-i",
+                "5"
         };
         Main.main(args);
     }
@@ -34,28 +34,28 @@ public class ArraySum {
     public void initAlbums() {
         int n = Integer.getInteger("arraysum.size", 1000);
         albums = IntStream.range(0, n)
-                          .mapToObj(i -> SampleData.aLoveSupreme.copy())
-                          .collect(toList());
+                .mapToObj(i -> SampleData.aLoveSupreme.copy())
+                .collect(toList());
     }
 
     @GenerateMicroBenchmark
     // BEGIN serial
-public int serialArraySum() {
-    return albums.stream()
-                 .flatMap(Album::getTracks)
-                 .mapToInt(Track::getLength)
-                 .sum();
-}
+    public int serialArraySum() {
+        return albums.stream()
+                .flatMap(Album::getTracks)
+                .mapToInt(Track::getLength)
+                .sum();
+    }
     // END serial
 
     @GenerateMicroBenchmark
     // BEGIN parallel
-public int parallelArraySum() {
-    return albums.parallelStream()
-                 .flatMap(Album::getTracks)
-                 .mapToInt(Track::getLength)
-                 .sum();
-}
+    public int parallelArraySum() {
+        return albums.parallelStream()
+                .flatMap(Album::getTracks)
+                .mapToInt(Track::getLength)
+                .sum();
+    }
     // END parallel
-    
+
 }

@@ -30,7 +30,7 @@ public class WordCounting {
                     .filter(line -> line.contains("<username>"))
                     .map(line -> {
                         Matcher matcher = username.matcher(line);
-                        matcher.find();
+                        boolean b = matcher.find();
                         return matcher.group(1);
                     })
                     .collect(groupingBy(word -> word, counting()));

@@ -48,28 +48,28 @@ public class OptimisationExampleFixed {
     public int slowSumOfSquares() {
         return linkedListOfNumbers.parallelStream()
                                   .map(x -> x * x)
-                                  .reduce(0, (acc, x) -> acc + x);
+                                  .reduce(0, Integer::sum);
     }
 
     @GenerateMicroBenchmark
     public int serialSlowSumOfSquares() {
         return linkedListOfNumbers.stream()
                                   .map(x -> x * x)
-                                  .reduce(0, (acc, x) -> acc + x);
+                                  .reduce(0, Integer::sum);
     }
 
     @GenerateMicroBenchmark
     public int intermediateSumOfSquares() {
         return arrayListOfNumbers.parallelStream()
                                  .map(x -> x * x)
-                                 .reduce(0, (acc, x) -> acc + x);
+                                 .reduce(0, Integer::sum);
     }
 
     @GenerateMicroBenchmark
     public int serialIntermediateSumOfSquares() {
         return arrayListOfNumbers.stream()
                                  .map(x -> x * x)
-                                 .reduce(0, (acc, x) -> acc + x);
+                                 .reduce(0, Integer::sum);
     }
 
     @GenerateMicroBenchmark

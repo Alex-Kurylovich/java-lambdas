@@ -35,8 +35,6 @@ public class OptimisationExample {
     public void init() {
         linkedListOfNumbers = new LinkedList<>();
         addNumbers(linkedListOfNumbers);
-
-        // TODO: put any additional setup code here
     }
 
     private void addNumbers(List<Integer> container) {
@@ -49,13 +47,12 @@ public class OptimisationExample {
     public int slowSumOfSquares() {
         return linkedListOfNumbers.parallelStream()
                                   .map(x -> x * x)
-                                  .reduce(0, (acc, x) -> acc + x);
+                                  .reduce(0, Integer::sum);
     }
     // END slowSumOfSquares
 
     @GenerateMicroBenchmark
     public int fastSumOfSquares() {
-        // TODO: implement faster version of slowSumOfSquares here
         return 0;
     }
 
