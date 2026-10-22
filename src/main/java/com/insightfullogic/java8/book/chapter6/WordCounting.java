@@ -14,10 +14,12 @@ import static java.util.stream.Collectors.groupingBy;
 public class WordCounting {
 
     public static void main(String[] args) {
-        InputStream enWiki = WordCounting.class.getResourceAsStream("enwiki-20131230-stubs-meta-hist-incr.xml");
-        new WordCounting().countUsers(enWiki);
-        // InputStream huckleberryFinn = WordCounting.class.getResourceAsStream("huckleberry_finn");
-        // new WordCounting().countWords(huckleberryFinn);
+        InputStream enWiki = WordCounting.class.getResourceAsStream("/enwiki-20131230-stubs-meta-hist-incr.xml");
+        if (enWiki != null)
+            new WordCounting().countUsers(enWiki);
+        InputStream huckleberryFinn = WordCounting.class.getResourceAsStream("/huckleberry_finn");
+        if (huckleberryFinn != null)
+            new WordCounting().countWords(huckleberryFinn);
     }
 
     private static final Pattern username = Pattern.compile("\\s+<username>(.*?)</username>");
