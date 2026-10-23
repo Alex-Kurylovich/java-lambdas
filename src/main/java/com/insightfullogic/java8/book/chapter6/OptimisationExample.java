@@ -42,18 +42,4 @@ public class OptimisationExample {
                  .forEach(container::add);
     }
 
-    @GenerateMicroBenchmark
-    // BEGIN slowSumOfSquares
-    public int slowSumOfSquares() {
-        return linkedListOfNumbers.parallelStream()
-                                  .map(x -> x * x)
-                                  .reduce(0, Integer::sum);
-    }
-    // END slowSumOfSquares
-
-    @GenerateMicroBenchmark
-    public int fastSumOfSquares() {
-        return 0;
-    }
-
 }

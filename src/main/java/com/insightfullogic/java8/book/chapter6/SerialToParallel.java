@@ -10,9 +10,4 @@ public class SerialToParallel {
                     .sum();
     }
 
-    public static int sequentialSumOfSquares(IntStream range) {
-        return range.map(x -> x * x)
-                    .sum();
-    }
-
 }

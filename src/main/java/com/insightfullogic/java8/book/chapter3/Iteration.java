@@ -8,10 +8,8 @@ import java.util.stream.Stream;
 public class Iteration {
 
     public void filterArtistsFromLondonPrinted(List<Artist> allArtists) {
-        // BEGIN filter_londoners_printed
         Stream<Artist> london = allArtists.stream()
                 .filter(artist -> artist.isFrom("London"));
-        // END filter_londoners_printed
     }
 
     public void internalCountArtistsFromLondonPrinted(List<Artist> allArtists) {

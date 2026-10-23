@@ -9,7 +9,5 @@ public interface Parent {
         message("Parent: Hi!");
     }
 
-    String getLastMessage();
-
 }
 // END body

@@ -97,11 +97,4 @@ public class StringExamples {
                 .collect(new StringCollector(", ", "[", "]"));
     }
 
-    public static String formatArtistsReducing(List<Artist> artists) {
-        // BEGIN reducing
-        // END reducing
-        return artists.stream()
-                .map(Artist::getName).map(name -> new StringCombiner(", ", "[", "]").add(name)).reduce(new StringCombiner(", ", "[", "]"), StringCombiner::merge)
-                .toString();
-    }
 }
