@@ -6,8 +6,4 @@ public class AlbumLookupException extends RuntimeException {
         super(cause);
     }
 
-    public AlbumLookupException(String message) {
-        super(message);
-    }
-
 }
