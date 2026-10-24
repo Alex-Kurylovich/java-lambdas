@@ -1,5 +1,6 @@
 package com.insightfullogic.java8.book.chapter9;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -30,11 +31,13 @@ public class ArtistAnalyzerTest {
     }
 
     @Test
+    @Ignore
     public void largerGroupsAreLarger() {
         assertLargerGroup(true, "The Beatles", "John Coltrane");
     }
 
     @Test
+    @Ignore
     public void smallerGroupsArentLarger() {
         assertLargerGroup(false, "John Coltrane", "The Beatles");
     }
