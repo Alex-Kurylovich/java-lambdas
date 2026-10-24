@@ -1,7 +1,7 @@
 package com.insightfullogic.java8.book.chapter7;
 
-import com.insightfullogic.java8.book.chapter1.Album;
-import com.insightfullogic.java8.book.chapter1.OrderDomain;
+import com.insightfullogic.java8.book.domain.Album;
+import com.insightfullogic.java8.book.domain.OrderDomain;
 import org.junit.Test;
 
 import java.util.Arrays;

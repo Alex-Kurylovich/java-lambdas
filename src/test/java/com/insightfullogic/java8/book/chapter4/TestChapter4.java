@@ -1,7 +1,7 @@
 package com.insightfullogic.java8.book.chapter4;
 
-import com.insightfullogic.java8.book.chapter1.Artist;
-import com.insightfullogic.java8.book.chapter1.SampleData;
+import com.insightfullogic.java8.book.domain.Artist;
+import com.insightfullogic.java8.book.domain.SampleData;
 import org.junit.Assert;
 import org.junit.Test;
 

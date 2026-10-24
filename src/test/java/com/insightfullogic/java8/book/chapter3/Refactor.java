@@ -1,7 +1,7 @@
 package com.insightfullogic.java8.book.chapter3;
 
-import com.insightfullogic.java8.book.chapter1.Album;
-import com.insightfullogic.java8.book.chapter1.Track;
+import com.insightfullogic.java8.book.domain.Album;
+import com.insightfullogic.java8.book.domain.Track;
 
 import java.util.HashSet;
 import java.util.List;

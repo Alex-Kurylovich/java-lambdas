@@ -1,10 +1,10 @@
 package com.insightfullogic.java8.book.chapter9;
 
 
-import com.insightfullogic.java8.book.chapter1.Album;
-import com.insightfullogic.java8.book.chapter1.Artist;
-import com.insightfullogic.java8.book.chapter1.SampleData;
-import com.insightfullogic.java8.book.chapter1.Track;
+import com.insightfullogic.java8.book.domain.Album;
+import com.insightfullogic.java8.book.domain.Artist;
+import com.insightfullogic.java8.book.domain.SampleData;
+import com.insightfullogic.java8.book.domain.Track;
 import org.junit.Test;
 
 import java.util.List;

@@ -1,7 +1,7 @@
 package com.insightfullogic.java8.book.chapter9;
 
-import com.insightfullogic.java8.book.chapter1.Artist;
-import com.insightfullogic.java8.book.chapter1.SampleData;
+import com.insightfullogic.java8.book.domain.Artist;
+import com.insightfullogic.java8.book.domain.SampleData;
 
 public class FakeLookupService {
 

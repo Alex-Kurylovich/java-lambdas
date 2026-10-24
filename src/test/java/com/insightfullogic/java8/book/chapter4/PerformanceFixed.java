@@ -1,6 +1,6 @@
 package com.insightfullogic.java8.book.chapter4;
 
-import com.insightfullogic.java8.book.chapter1.Artist;
+import com.insightfullogic.java8.book.domain.Artist;
 
 import java.util.stream.Stream;
 

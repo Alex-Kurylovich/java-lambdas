@@ -1,4 +1,4 @@
-package com.insightfullogic.java8.book.chapter1;
+package com.insightfullogic.java8.book.domain;
 
 import java.util.stream.Stream;
 

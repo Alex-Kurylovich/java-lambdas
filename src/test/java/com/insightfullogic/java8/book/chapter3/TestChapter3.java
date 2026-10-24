@@ -1,8 +1,8 @@
 package com.insightfullogic.java8.book.chapter3;
 
-import com.insightfullogic.java8.book.chapter1.Album;
-import com.insightfullogic.java8.book.chapter1.SampleData;
-import com.insightfullogic.java8.book.chapter1.Track;
+import com.insightfullogic.java8.book.domain.Album;
+import com.insightfullogic.java8.book.domain.SampleData;
+import com.insightfullogic.java8.book.domain.Track;
 import org.junit.Test;
 
 import java.util.*;
@@ -14,9 +14,9 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static com.insightfullogic.java8.book.chapter3.Question2.countBandMembersInternal;
-import static com.insightfullogic.java8.book.chapter1.SampleData.*;
-import static com.insightfullogic.java8.book.chapter1.SampleData.aLoveSupreme;
-import static com.insightfullogic.java8.book.chapter1.SampleData.sampleShortAlbum;
+import static com.insightfullogic.java8.book.domain.SampleData.*;
+import static com.insightfullogic.java8.book.domain.SampleData.aLoveSupreme;
+import static com.insightfullogic.java8.book.domain.SampleData.sampleShortAlbum;
 import static com.insightfullogic.java8.book.chapter3.StreamExercises.countBandMembersExternal;
 import static java.lang.Character.isDigit;
 import static java.util.Arrays.asList;

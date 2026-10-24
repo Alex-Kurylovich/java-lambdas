@@ -1,6 +1,6 @@
 package com.insightfullogic.java8.book.chapter9;
 
-import com.insightfullogic.java8.book.chapter1.Artist;
+import com.insightfullogic.java8.book.domain.Artist;
 import rx.Observable;
 
 import java.util.List;
