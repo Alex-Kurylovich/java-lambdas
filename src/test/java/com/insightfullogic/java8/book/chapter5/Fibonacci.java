@@ -2,13 +2,14 @@ package com.insightfullogic.java8.book.chapter5;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class Fibonacci {
 
     private final Map<Integer,Long> cache;
 
     public Fibonacci() {
-        cache = new HashMap<>();
+        cache = new ConcurrentHashMap<>();
         cache.put(0, 0L);
         cache.put(1, 1L);
     }

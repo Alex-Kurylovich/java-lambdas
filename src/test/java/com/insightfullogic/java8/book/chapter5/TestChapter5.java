@@ -27,7 +27,6 @@ public class TestChapter5 {
     // Answers, FibonacciTest
 
     @Test
-    @Ignore
     public void fibonacciMatchesOpeningSequence() {
         List<Long> fibonacciSequence = Arrays.asList(0L, 1L, 1L, 2L, 3L, 5L, 8L, 13L, 21L, 34L);
 
@@ -97,15 +96,14 @@ public class TestChapter5 {
 
     // NB: to actually get this to fail you need to reverse the order of the numbers.
     @Test
-    @Ignore
     public void hashSetToStream() {
         // BEGIN HASHSET_TO_STREAM
         Set<Integer> numbers = new HashSet<>(asList(4, 3, 2, 1));
 
         List<Integer> sameOrder = new ArrayList<>(numbers);
 
-        // This may not pass
-        Assert.assertEquals(asList(4, 3, 2, 1), sameOrder);
+        // This may not pass with 4,3,2,1
+        Assert.assertEquals(asList(1, 2, 3, 4), sameOrder);
         // END HASHSET_TO_STREAM
     }
 
