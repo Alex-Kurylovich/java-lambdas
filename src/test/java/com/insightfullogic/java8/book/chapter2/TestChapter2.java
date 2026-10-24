@@ -44,8 +44,9 @@ public class TestChapter2 {
 
     @Test
     @Ignore
+    // This is the 01-Jan1970 - 31-Dec 1969 problem
     public void _2b() {
-        ThreadLocal<DateFormat> threadSafeFormatter = ThreadLocal.withInitial(() -> DateFormat.getDateInstance(DateFormat.MEDIUM, Locale.UK));
+        ThreadLocal<DateFormat> threadSafeFormatter = ThreadLocal.withInitial(() -> DateFormat.getDateInstance(DateFormat.MEDIUM));
         DateFormat formatter = threadSafeFormatter.get();
         assertEquals("01-Jan-1970", formatter.format(new Date(0)));
     }
