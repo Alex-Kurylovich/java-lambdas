@@ -33,7 +33,7 @@ public class TestChapter5 {
 
         IntStream.range(0, fibonacciSequence.size())
                 .forEach(x -> {
-                    com.insightfullogic.java8.book.chapter5.Fibonacci fibonacci = new Fibonacci();
+                    Fibonacci fibonacci = new Fibonacci();
                     long result = fibonacci.fibonacci(x);
                     long expectedResult = fibonacciSequence.get(x);
                     assertEquals(expectedResult, result);

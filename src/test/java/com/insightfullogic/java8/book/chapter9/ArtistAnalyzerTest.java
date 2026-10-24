@@ -31,13 +31,11 @@ public class ArtistAnalyzerTest {
     }
 
     @Test
-    @Ignore
     public void largerGroupsAreLarger() {
         assertLargerGroup(true, "The Beatles", "John Coltrane");
     }
 
     @Test
-    @Ignore
     public void smallerGroupsArentLarger() {
         assertLargerGroup(false, "John Coltrane", "The Beatles");
     }
