@@ -1,6 +1,5 @@
 package com.insightfullogic.java8.book.chapter5;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
