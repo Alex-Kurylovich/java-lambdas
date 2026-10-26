@@ -10,13 +10,10 @@ public class OrderDomain extends Order {
         super(albums);
     }
 
-    // BEGIN body
     public long countFeature(ToLongFunction<Album> function) {
         return albums.stream()
                 .mapToLong(function)
                 .sum();
     }
-
-    // END body
 
 }

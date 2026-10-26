@@ -10,7 +10,6 @@ public interface Performance {
 
     Stream<Artist> getMusicians();
 
-    // TODO: test
     default Stream<Artist> getAllMusicians() {
         return getMusicians().flatMap(artist -> {
             return concat(Stream.of(artist), artist.getMembers());
