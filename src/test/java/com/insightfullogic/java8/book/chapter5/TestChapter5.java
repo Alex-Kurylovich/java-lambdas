@@ -24,9 +24,9 @@ import java.util.stream.Stream;
 
 import static java.util.Arrays.asList;
 import static java.util.stream.Collectors.toList;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThat;
 
 public class TestChapter5 {
 
@@ -92,12 +92,10 @@ public class TestChapter5 {
 
     @Test
     public void listToStream() {
-        // BEGIN LIST_TO_STREAM
         List<Integer> numbers = asList(1, 2, 3, 4);
 
         List<Integer> sameOrder = new ArrayList<>(numbers);
         Assert.assertEquals(numbers, sameOrder);
-        // END LIST_TO_STREAM
     }
 
     // NB: to actually get this to fail you need to reverse the order of the numbers.
