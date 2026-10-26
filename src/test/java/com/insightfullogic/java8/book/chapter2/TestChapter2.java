@@ -1,6 +1,5 @@
 package com.insightfullogic.java8.book.chapter2;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
 import javax.swing.*;
@@ -33,7 +32,6 @@ public class TestChapter2 {
     @Test
     public void _1c() {
         Function<Integer, Integer> one = x -> x + 1;
-        // 2 isn't
         Function<Integer, Boolean> three = x -> x == 1;
     }
 
@@ -52,13 +50,11 @@ public class TestChapter2 {
 
     @Test
     public void _3a() {
-        // yes
         Runnable helloWorld = () -> System.out.println("hello world");
     }
 
     @Test
     public void _3b() {
-        // Yes
         JButton button = new JButton();
         button.addActionListener(event -> System.out.println(event.getActionCommand()));
     }
@@ -67,22 +63,19 @@ public class TestChapter2 {
 
     @Test
     public void mostSpecific() {
-        // BEGIN most_specific_overload_call
         overloadedMethod();
-        // END most_specific_overload_call
     }
+
     @Test
     public void mostSpecificBiFunction() {
-
         overloadedMethod(Integer::sum);
     }
 
-        private void overloadedMethod() {
+    private void overloadedMethod() {
         System.out.print("String");
-    }
-    // END most_specific_overload
 
-    // BEGIN most_specific_bifunction
+    }
+
     private interface IntegerBiFunction extends BinaryOperator<Integer> {
 
     }
@@ -90,6 +83,5 @@ public class TestChapter2 {
     private void overloadedMethod(IntegerBiFunction lambda) {
         System.out.print("IntegerBinaryOperator");
     }
-    // END most_specific_bifunction
 
 }

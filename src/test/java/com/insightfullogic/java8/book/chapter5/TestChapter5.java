@@ -103,19 +103,16 @@ public class TestChapter5 {
     // NB: to actually get this to fail you need to reverse the order of the numbers.
     @Test
     public void hashSetToStream() {
-        // BEGIN HASHSET_TO_STREAM
         Set<Integer> numbers = new HashSet<>(asList(4, 3, 2, 1));
 
         List<Integer> sameOrder = new ArrayList<>(numbers);
 
         // This may not pass with 4,3,2,1
         Assert.assertEquals(asList(1, 2, 3, 4), sameOrder);
-        // END HASHSET_TO_STREAM
     }
 
     @Test
     public void hashSetToStreamSorted() {
-        // BEGIN HASHSET_TO_STREAM_SORTED
         Set<Integer> numbers = new HashSet<>(asList(4, 3, 2, 1));
 
         List<Integer> sameOrder = numbers.stream()
@@ -123,12 +120,10 @@ public class TestChapter5 {
                 .collect(toList());
 
         Assert.assertEquals(asList(1, 2, 3, 4), sameOrder);
-        // END HASHSET_TO_STREAM_SORTED
     }
 
     @Test
     public void toStreamMapped() {
-        // BEGIN TO_STREAM_MAPPED
         List<Integer> numbers = asList(1, 2, 3, 4);
 
         List<Integer> stillOrdered = numbers.stream()
@@ -149,7 +144,6 @@ public class TestChapter5 {
         assertThat(stillUnordered, hasItem(3));
         assertThat(stillUnordered, hasItem(4));
         assertThat(stillUnordered, hasItem(5));
-        // END TO_STREAM_MAPPED
     }
 
     // Examples, StringCollectorTest

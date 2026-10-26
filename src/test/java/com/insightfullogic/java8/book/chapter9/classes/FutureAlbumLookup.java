@@ -23,7 +23,6 @@ public class FutureAlbumLookup implements AlbumLookup {
         this.artists = artists;
     }
 
-    // BEGIN lookupByName
     @Override
     public Album lookupByName(String albumName) {
         Future<Credentials> trackLogin = loginTo("track"); // <1>
@@ -38,7 +37,6 @@ public class FutureAlbumLookup implements AlbumLookup {
             throw new AlbumLookupException(e.getCause()); // <4>
         }
     }
-    // END lookupByName
 
     // ----------------- FAKE LOOKUP METHODS -----------------
     //         Represent API lookup on external services

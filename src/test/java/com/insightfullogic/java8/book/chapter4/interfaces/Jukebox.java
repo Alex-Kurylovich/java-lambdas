@@ -1,6 +1,5 @@
 package com.insightfullogic.java8.book.chapter4.interfaces;
 
-// BEGIN body
 public interface Jukebox {
 
     default String rock() {
@@ -8,4 +7,3 @@ public interface Jukebox {
     }
 
 }
-// END body

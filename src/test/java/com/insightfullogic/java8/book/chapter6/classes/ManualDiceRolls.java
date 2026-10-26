@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.*;
 
-// BEGIN ManualDiceRolls
 public class ManualDiceRolls {
 
     private static final int N = 100000000;
@@ -83,4 +82,3 @@ public class ManualDiceRolls {
     }
 
 }
-// END ManualDiceRolls

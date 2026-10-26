@@ -17,7 +17,6 @@ public class TestChapter7 {
 
     // Examples, OrderDomainExampleTest
 
-    // BEGIN can_count_albums
     @Test
     public void canCountFeatures() {
         OrderDomain order = new OrderDomain(asList(
@@ -28,7 +27,6 @@ public class TestChapter7 {
 
         assertEquals(8, order.countFeature(album -> 2));
     }
-    // END can_count_albums
 
     private Album newAlbum(String name) {
         return new Album(name, emptyList(), emptyList());
@@ -36,16 +34,13 @@ public class TestChapter7 {
 
     // Examples, TestingTest
 
-    // BEGIN to_uppercase
     @Test
     public void multipleWordsToUppercase() {
         List<String> input = Arrays.asList("a", "b", "hello");
         List<String> result = Testing.allToUpperCase(input);
         assertEquals(asList("A", "B", "HELLO"), result);
     }
-    // END to_uppercase
 
-    // BEGIN twoLetterStringConvertedToUppercaseLambdas
     @Test
     public void twoLetterStringConvertedToUppercaseLambdas() {
         List<String> input = Collections.singletonList("ab");

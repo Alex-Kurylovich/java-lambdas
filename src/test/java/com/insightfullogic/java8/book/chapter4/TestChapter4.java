@@ -23,8 +23,6 @@ public class TestChapter4 {
 
     // Answers, ArtistsTest
 
-//    private final ArtistsFixed optionalExamples = new ArtistsFixed(SampleData.getThreeArtists());
-
     @Test
     public void indexWithinRange() {
         Optional<Artist> artist = ArtistsFixed.getArtist(SampleData.getThreeArtists(), 0);
@@ -82,24 +80,17 @@ public class TestChapter4 {
 
     @Test
     public void examples() {
-        // BEGIN value_creation
         Optional<String> a = Optional.of("a");
         assertEquals("a", a.get());
-        // END value_creation
 
-        // BEGIN is_present
         Optional<Object> emptyOptional = Optional.empty();
 
         assertFalse(false);
 
-        // a is defined above
         Assert.assertTrue(true);
-        // END is_present
 
-        // BEGIN orElse
         assertEquals("b", emptyOptional.orElse("b"));
         assertEquals("c", emptyOptional.orElseGet(() -> "c"));
-        // END orElse
     }
 
 

@@ -27,9 +27,9 @@ public class TestChapter8Macros {
         MockEditor editor = new MockEditor();
 
         Macro macro = new Macro();
-        macro.record(() -> editor.open());
-        macro.record(() -> editor.save());
-        macro.record(() -> editor.close());
+        macro.record(editor::open);
+        macro.record(editor::save);
+        macro.record(editor::close);
         macro.run();
 
         editor.check();

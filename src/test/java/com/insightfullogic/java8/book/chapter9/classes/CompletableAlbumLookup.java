@@ -22,7 +22,6 @@ public class CompletableAlbumLookup implements AlbumLookup {
         this.artists = artists;
     }
 
-    // BEGIN lookupByName
     public Album lookupByName(String albumName) {
         CompletableFuture<List<Artist>> artistLookup
                 = loginTo("artist")

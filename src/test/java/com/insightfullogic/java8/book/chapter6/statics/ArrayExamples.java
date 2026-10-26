@@ -5,7 +5,6 @@ import java.util.stream.IntStream;
 
 public class ArrayExamples {
 
-    // BEGIN simpleMovingAverage
     public static double[] simpleMovingAverage(double[] values, int n) {
         double[] sums = Arrays.copyOf(values, values.length); // <1>
         Arrays.parallelPrefix(sums, Double::sum); // <2>
@@ -17,17 +16,13 @@ public class ArrayExamples {
                 })
                 .toArray(); // <5>
     }
-    // END simpleMovingAverage
 
-    // BEGIN parallelInitialize
     public static double[] parallelInitialize(int size) {
         double[] values = new double[size];
         Arrays.parallelSetAll(values, i -> i);
         return values;
     }
-    // END parallelInitialize
 
-    // BEGIN imperativeInitilize
     public static double[] imperativeInitilize(int size) {
         double[] values = new double[size];
         for (int i = 0; i < values.length; i++) {
@@ -35,6 +30,5 @@ public class ArrayExamples {
         }
         return values;
     }
-    // END imperativeInitilize
 
 }

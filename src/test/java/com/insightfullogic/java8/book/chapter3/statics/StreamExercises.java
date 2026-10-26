@@ -9,7 +9,6 @@ import java.util.stream.Stream;
 
 public class StreamExercises {
 
-    // Q3
     public static int countBandMembersExternal(List<Artist> artists) {
         // BEGIN COUNT_MEMBERS_EXTERNAL
         int totalMembers = 0;

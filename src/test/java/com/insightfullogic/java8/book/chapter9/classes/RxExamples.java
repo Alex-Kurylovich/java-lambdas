@@ -19,7 +19,6 @@ public class RxExamples {
                 .collect(toList());
     }
 
-    // BEGIN search
     public Observable<Artist> search(String searchedName,
                                      String searchedNationality,
                                      int maxResults) {
@@ -31,7 +30,6 @@ public class RxExamples {
                         .contains(searchedNationality))
                 .take(maxResults); // <5>
     }
-    // END search
 
     //  ------------------ FAKE LOOKUP CODE ------------------
     //          Again, imaginary external web services
