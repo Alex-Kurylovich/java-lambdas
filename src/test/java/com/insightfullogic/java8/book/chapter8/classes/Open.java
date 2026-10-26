@@ -1,6 +1,7 @@
 package com.insightfullogic.java8.book.chapter8.classes;
 
 import com.insightfullogic.java8.book.chapter8.interfaces.Action;
+import com.insightfullogic.java8.book.chapter8.interfaces.Editor;
 
 public class Open implements Action {
 

@@ -10,13 +10,11 @@ import java.util.stream.Stream;
 public class StreamExercises {
 
     public static int countBandMembersExternal(List<Artist> artists) {
-        // BEGIN COUNT_MEMBERS_EXTERNAL
         int totalMembers = 0;
         for (Artist artist : artists) {
             Stream<Artist> members = artist.getMembers();
             totalMembers = (int) (totalMembers + members.count());
         }
-        // END COUNT_MEMBERS_EXTERNAL
 
         return totalMembers;
     }

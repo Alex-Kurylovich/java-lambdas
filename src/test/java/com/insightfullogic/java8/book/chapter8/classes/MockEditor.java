@@ -1,5 +1,7 @@
 package com.insightfullogic.java8.book.chapter8.classes;
 
+import com.insightfullogic.java8.book.chapter8.interfaces.Editor;
+
 import java.util.ArrayList;
 import java.util.List;
 

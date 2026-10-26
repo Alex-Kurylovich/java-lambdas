@@ -1,4 +1,4 @@
-package com.insightfullogic.java8.book.chapter8.classes;
+package com.insightfullogic.java8.book.chapter8.interfaces;
 
 public interface Editor {
 
