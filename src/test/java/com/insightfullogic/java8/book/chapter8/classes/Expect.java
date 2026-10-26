@@ -1,0 +1,16 @@
+package com.insightfullogic.java8.book.chapter8.classes;
+
+import java.util.Collection;
+
+public final class Expect {
+
+    public BoundExpectation that(Object value) {
+        return new BoundExpectation(value);
+    }
+
+    // Rest of class omitted
+    public CollectionExpectation that(Collection<?> collection) {
+        return new CollectionExpectation(collection);
+    }
+
+}
