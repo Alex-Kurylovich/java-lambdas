@@ -11,7 +11,7 @@ import java.util.Collection;
 import static org.junit.Assert.assertArrayEquals;
 
 @RunWith(value = Parameterized.class)
-public class ArrayExamplesTest {
+public class TestChapter6ArrayExamples {
 
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
@@ -26,7 +26,7 @@ public class ArrayExamplesTest {
     private final int size;
     private final double[] output;
 
-    public ArrayExamplesTest(int size, double[] output) {
+    public TestChapter6ArrayExamples(int size, double[] output) {
         this.size = size;
         this.output = output;
     }

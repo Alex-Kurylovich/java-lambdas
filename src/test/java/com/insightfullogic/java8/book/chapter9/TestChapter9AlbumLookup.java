@@ -16,7 +16,7 @@ import java.util.stream.Stream;
 
 import static org.junit.Assert.assertEquals;
 
-public class AlbumLookupTest {
+public class TestChapter9AlbumLookup {
 
     interface AlbumLookupFactory extends BiFunction<List<Track>, List<Artist>, AlbumLookup> {
 

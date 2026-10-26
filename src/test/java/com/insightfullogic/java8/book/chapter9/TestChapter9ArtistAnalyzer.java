@@ -15,7 +15,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class ArtistAnalyzerTest {
+public class TestChapter9ArtistAnalyzer {
 
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
@@ -29,7 +29,7 @@ public class ArtistAnalyzerTest {
 
     private final ArtistAnalyzer analyser;
 
-    public ArtistAnalyzerTest(ArtistAnalyzer analyser) {
+    public TestChapter9ArtistAnalyzer(ArtistAnalyzer analyser) {
         this.analyser = analyser;
     }
 

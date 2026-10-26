@@ -7,7 +7,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class RxExamplesTest {
+public class TestChapter9RxExamples {
 
     @Test
     public void filtersAlbums() throws InterruptedException {
