@@ -1,5 +1,12 @@
 package com.insightfullogic.java8.book.chapter5;
 
+import com.insightfullogic.java8.book.chapter5.classes.Fibonacci;
+import com.insightfullogic.java8.book.chapter5.classes.GroupingBy;
+import com.insightfullogic.java8.book.chapter5.classes.StringCollector;
+import com.insightfullogic.java8.book.chapter5.classes.StringCombiner;
+import com.insightfullogic.java8.book.chapter5.statics.LongestName;
+import com.insightfullogic.java8.book.chapter5.statics.StringExamples;
+import com.insightfullogic.java8.book.chapter5.statics.WordCount;
 import com.insightfullogic.java8.book.domain.Artist;
 import com.insightfullogic.java8.book.domain.SampleData;
 import org.junit.Assert;
@@ -42,7 +49,7 @@ public class TestChapter5 {
 
     @Test
     public void stringsByLength() {
-        com.insightfullogic.java8.book.chapter5.GroupingBy<String, Integer> stringIntegerGroupingBy = new GroupingBy<>(String::length);
+        GroupingBy<String, Integer> stringIntegerGroupingBy = new GroupingBy<>(String::length);
         Map<Integer,List<String>> results = Stream.of("a", "b", "cc", "dd")
                 .collect(stringIntegerGroupingBy);
 

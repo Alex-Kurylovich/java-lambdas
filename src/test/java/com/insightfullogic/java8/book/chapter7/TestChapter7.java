@@ -1,5 +1,6 @@
 package com.insightfullogic.java8.book.chapter7;
 
+import com.insightfullogic.java8.book.chapter7.statics.Testing;
 import com.insightfullogic.java8.book.domain.Album;
 import com.insightfullogic.java8.book.domain.OrderDomain;
 import org.junit.Test;

@@ -1,5 +1,9 @@
 package com.insightfullogic.java8.book.chapter4;
 
+import com.insightfullogic.java8.book.chapter4.interfaces.PerformanceFixed;
+import com.insightfullogic.java8.book.chapter4.statics.ArtistsFixed;
+import com.insightfullogic.java8.book.chapter4.classes.MusicalCarriage;
+import com.insightfullogic.java8.book.chapter4.statics.Primitives;
 import com.insightfullogic.java8.book.domain.Artist;
 import com.insightfullogic.java8.book.domain.SampleData;
 import org.junit.Assert;
@@ -10,7 +14,7 @@ import java.util.Optional;
 import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
-import static junit.framework.TestCase.assertTrue;
+//import static junit.framework.TestCase.assertTrue;
 import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.hasItems;
 import static org.junit.Assert.*;
@@ -19,29 +23,29 @@ public class TestChapter4 {
 
     // Answers, ArtistsTest
 
-    private final ArtistsFixed optionalExamples = new ArtistsFixed(SampleData.getThreeArtists());
+//    private final ArtistsFixed optionalExamples = new ArtistsFixed(SampleData.getThreeArtists());
 
     @Test
     public void indexWithinRange() {
-        Optional<Artist> artist = optionalExamples.getArtist(0);
+        Optional<Artist> artist = ArtistsFixed.getArtist(SampleData.getThreeArtists(), 0);
         assertTrue(artist.isPresent());
     }
 
     @Test
     public void indexOutsideRange() {
-        Optional<Artist> artist = optionalExamples.getArtist(4);
+        Optional<Artist> artist = ArtistsFixed.getArtist(SampleData.getThreeArtists(), 4);
         assertFalse(artist.isPresent());
     }
 
     @Test
     public void nameIndexInsideRange() {
-        String artist = optionalExamples.getArtistName(0);
+        String artist = ArtistsFixed.getArtistName(SampleData.getThreeArtists(), 0);
         Assert.assertEquals("John Coltrane", artist);
     }
 
     @Test
     public void nameIndexOutsideRange() {
-        String artist = optionalExamples.getArtistName(4);
+        String artist = ArtistsFixed.getArtistName(SampleData.getThreeArtists(), 4);
         assertEquals("unknown", artist);
     }
 
@@ -49,7 +53,7 @@ public class TestChapter4 {
 
     @Test
     public void findsAllTheBeatles() {
-        com.insightfullogic.java8.book.chapter4.PerformanceFixed stub = new PerformanceFixed() {
+        PerformanceFixed stub = new PerformanceFixed() {
             @Override
             public String getName() {
                 throw new UnsupportedOperationException();

@@ -1,6 +1,9 @@
 package com.insightfullogic.java8.book.chapter9;
 
 
+import com.insightfullogic.java8.book.chapter9.classes.CompletableAlbumLookup;
+import com.insightfullogic.java8.book.chapter9.classes.FutureAlbumLookup;
+import com.insightfullogic.java8.book.chapter9.interfaces.AlbumLookup;
 import com.insightfullogic.java8.book.domain.Album;
 import com.insightfullogic.java8.book.domain.Artist;
 import com.insightfullogic.java8.book.domain.SampleData;

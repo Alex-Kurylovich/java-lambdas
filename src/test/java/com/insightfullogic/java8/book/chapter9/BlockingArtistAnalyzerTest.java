@@ -1,5 +1,7 @@
 package com.insightfullogic.java8.book.chapter9;
 
+import com.insightfullogic.java8.book.chapter9.classes.BlockingArtistAnalyzer;
+import com.insightfullogic.java8.book.chapter9.classes.FakeLookupService;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
@@ -7,7 +9,7 @@ import static org.junit.Assert.assertTrue;
 
 public class BlockingArtistAnalyzerTest {
 
-    private final com.insightfullogic.java8.book.chapter9.BlockingArtistAnalyzer analyser = new BlockingArtistAnalyzer(new FakeLookupService()::lookupArtistName);
+    private final BlockingArtistAnalyzer analyser = new BlockingArtistAnalyzer(new FakeLookupService()::lookupArtistName);
 
     @Test
     public void largerGroupsAreLarger() {

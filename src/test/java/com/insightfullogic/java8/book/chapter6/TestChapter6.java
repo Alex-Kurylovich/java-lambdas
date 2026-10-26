@@ -1,5 +1,8 @@
 package com.insightfullogic.java8.book.chapter6;
 
+import com.insightfullogic.java8.book.chapter6.statics.ArrayExamples;
+import com.insightfullogic.java8.book.chapter6.statics.BuggyReduce;
+import com.insightfullogic.java8.book.chapter6.statics.SerialToParallel;
 import org.junit.Test;
 
 import java.util.Arrays;

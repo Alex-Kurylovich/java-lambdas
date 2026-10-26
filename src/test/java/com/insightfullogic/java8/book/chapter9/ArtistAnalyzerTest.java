@@ -1,6 +1,9 @@
 package com.insightfullogic.java8.book.chapter9;
 
-import org.junit.Ignore;
+import com.insightfullogic.java8.book.chapter9.classes.CallbackArtistAnalyser;
+import com.insightfullogic.java8.book.chapter9.classes.CompletableFutureArtistAnalyser;
+import com.insightfullogic.java8.book.chapter9.classes.FakeLookupService;
+import com.insightfullogic.java8.book.chapter9.interfaces.ArtistAnalyzer;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;

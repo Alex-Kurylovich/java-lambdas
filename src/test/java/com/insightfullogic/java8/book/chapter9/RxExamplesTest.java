@@ -1,5 +1,6 @@
 package com.insightfullogic.java8.book.chapter9;
 
+import com.insightfullogic.java8.book.chapter9.classes.RxExamples;
 import com.insightfullogic.java8.book.domain.Artist;
 import com.insightfullogic.java8.book.domain.SampleData;
 import org.junit.Test;

@@ -1,5 +1,6 @@
 package com.insightfullogic.java8.book.chapter6;
 
+import com.insightfullogic.java8.book.chapter6.statics.ArrayExamples;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;

@@ -1,5 +1,7 @@
 package com.insightfullogic.java8.book.chapter3;
 
+import com.insightfullogic.java8.book.chapter3.classes.Iteration;
+import com.insightfullogic.java8.book.chapter3.statics.*;
 import com.insightfullogic.java8.book.domain.Album;
 import com.insightfullogic.java8.book.domain.SampleData;
 import com.insightfullogic.java8.book.domain.Track;
@@ -13,11 +15,11 @@ import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static com.insightfullogic.java8.book.chapter3.Question2.countBandMembersInternal;
+import static com.insightfullogic.java8.book.chapter3.statics.Question2.countBandMembersInternal;
 import static com.insightfullogic.java8.book.domain.SampleData.*;
 import static com.insightfullogic.java8.book.domain.SampleData.aLoveSupreme;
 import static com.insightfullogic.java8.book.domain.SampleData.sampleShortAlbum;
-import static com.insightfullogic.java8.book.chapter3.StreamExercises.countBandMembersExternal;
+import static com.insightfullogic.java8.book.chapter3.statics.StreamExercises.countBandMembersExternal;
 import static java.lang.Character.isDigit;
 import static java.util.Arrays.asList;
 import static java.util.Collections.unmodifiableList;
@@ -86,19 +88,19 @@ public class TestChapter3 {
 
     @Test
     public void addsEmptyList() {
-        int result = com.insightfullogic.java8.book.chapter3.Question1.addUp(Stream.empty());
+        int result = Question1.addUp(Stream.empty());
         assertEquals(0, result);
     }
 
     @Test
     public void addsListWithValues() {
-        int result = com.insightfullogic.java8.book.chapter3.Question1.addUp(Stream.of(1, 3, -2));
+        int result = Question1.addUp(Stream.of(1, 3, -2));
         assertEquals(2, result);
     }
 
     @Test
     public void extractsNamesAndOriginsOfArtists() {
-        List<String> namesAndOrigins = com.insightfullogic.java8.book.chapter3.Question1.getNamesAndOrigins(SampleData.getThreeArtists());
+        List<String> namesAndOrigins = Question1.getNamesAndOrigins(SampleData.getThreeArtists());
         assertEquals(asList("John Coltrane", "US", "John Lennon", "UK", "The Beatles", "UK"), namesAndOrigins);
     }
 
@@ -120,22 +122,22 @@ public class TestChapter3 {
 
     @Test
     public void noLowercaseLettersInAnEmptyString() {
-        assertEquals(0, com.insightfullogic.java8.book.chapter3.StringExercises.countLowercaseLetters(""));
+        assertEquals(0, StringExercises.countLowercaseLetters(""));
     }
 
     @Test
     public void countsLowercaseLetterExample() {
-        assertEquals(3, com.insightfullogic.java8.book.chapter3.StringExercises.countLowercaseLetters("aBcDeF"));
+        assertEquals(3, StringExercises.countLowercaseLetters("aBcDeF"));
     }
 
     @Test
     public void supportsNoLowercaseLetters() {
-        assertEquals(0, com.insightfullogic.java8.book.chapter3.StringExercises.countLowercaseLetters("ABCDEF"));
+        assertEquals(0, StringExercises.countLowercaseLetters("ABCDEF"));
     }
 
     @Test
     public void noStringReturnedForEmptyList() {
-        assertFalse(com.insightfullogic.java8.book.chapter3.StringExercises.mostLowercaseString(Collections.emptyList()).isPresent());
+        assertFalse(StringExercises.mostLowercaseString(Collections.emptyList()).isPresent());
     }
 
     @Test
